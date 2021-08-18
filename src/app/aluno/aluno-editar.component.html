@@ -16,6 +16,7 @@
             <mat-icon matSuffix>edit</mat-icon>
         </mat-form-field>
     </div>
+    <br>
     <div>
         <mat-radio-group aria-label="Sexo" required [(ngModel)]="aluno.sexo" name="sexo">
             <mat-label>Sexo:</mat-label>
@@ -23,16 +24,16 @@
             <mat-radio-button value="Masculino">Masculino</mat-radio-button>
         </mat-radio-group>
     </div>
+    <br>
     <div>
         <mat-label>Data de Nascimento:</mat-label>
-        <mat-label>Escolha a data</mat-label>
         <mat-form-field appearance="fill">
-            <mat-label>Escolha a data</mat-label>
-            <input matInput [matDatepicker]="picker" [(ngModel)]="aluno.dt_nasc" required>
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
+            <mat-label>dd/mm/aaaa</mat-label>
+            <input matInput placeholder="Digite a Data de Nascimento" id="dt_nasc" required [(ngModel)]="aluno.dt_nasc"
+            name="nome">
         </mat-form-field>
     </div>
+    <br>
     <div class="button">
         <span class="bt" (click)="atualizar()">
             <img class="img-btn" src="assets/img/check_box.png">Atualizar

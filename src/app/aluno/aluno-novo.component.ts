@@ -29,7 +29,7 @@ export class AlunoNovoComponent implements OnInit {
     const data = new Date(this.aluno.dt_nasc.toString());
     // const dataFormatada = data.toISOString().split('T')[0];
 
-    this.aluno.dt_nasc = data.toLocaleDateString();
+    //this.aluno.dt_nasc = data.toLocaleDateString();
     console.log(this.aluno.dt_nasc);
     this.alunoService.createAluno(this.aluno)
       .subscribe(
